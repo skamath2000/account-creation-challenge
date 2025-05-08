@@ -5,6 +5,8 @@ import { FlowLayout } from '../../../reusable-components/flow-layout/flow-layout
 import { Input } from '../../../reusable-components/input/input.tsx';
 
 export function StockRestrictions() {
+  const [stockSymbol, setStockSymbol] = React.useState('');
+
   return (
     <FlowLayout>
       <Card
@@ -13,8 +15,8 @@ export function StockRestrictions() {
       >
         {/*<li>style UI to look like given mock, make sure the typeahead is realtime feeling search</li>*/}
         <div className="space-y-2">
-          <Input label="Stock Symbol" />
-          <Button href="/signup/deposit">Continue</Button>
+          <Input value={stockSymbol} onChange={(event) => { setStockSymbol(event.target.value) }}label="Stock Symbol" />
+          <Button href="/signup/create-account">Continue</Button>
         </div>
       </Card>
     </FlowLayout>
