@@ -2,7 +2,7 @@ import React from 'react';
 import { Card } from '../../../reusable-components/card/card.tsx';
 import { FlowLayout } from '../../../reusable-components/flow-layout/flow-layout.tsx';
 import { Button } from '../../../reusable-components/button/button.tsx';
-import { RadioButtonGroup } from '../../../reusable-components/radio-button-group/radion-button-group.tsx';
+import { RadioButtonGroup } from '../../../reusable-components/radio-button-group/radio-button-group.tsx';
 
 export function AccountSelection() {
   const [accountType, setAccountType] = React.useState('');
