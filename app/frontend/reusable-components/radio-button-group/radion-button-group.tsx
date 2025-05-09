@@ -15,7 +15,7 @@ export const RadioButtonGroup = ({radioOptions, onChange}: RadioButtonGroupProps
     return (
         <ul className="p-3 space-y-1 text-sm text-gray-700 mb-10">
             {radioOptions.map((option, index) => 
-                <li>
+                <li key={`radio-list-option-${index}`}>
                     <div className="flex p-2 rounded-md hover:bg-gray-100">
                         <div className="flex items-center justify-center h-8 w-8">
                             <input onChange={onChange} id={`radio-option-${index}`} name="helper-radio" type="radio" value={option.value} className={radioClasses} />

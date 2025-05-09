@@ -4,7 +4,7 @@ import { Card } from '../../reusable-components/card/card.tsx';
 import { FlowLayout } from '../../reusable-components/flow-layout/flow-layout.tsx';
 import { Input } from '../../reusable-components/input/input.tsx';
 import { useNavigate } from 'react-router-dom'; 
-import { Alert } from 'app/frontend/reusable-components/alert/alert.tsx';
+import { Alert } from '../../reusable-components/alert/alert.tsx';
 
 export const CreateAccount = () => {
   const [username, setUsername] = React.useState('');
@@ -33,7 +33,7 @@ export const CreateAccount = () => {
   const createAccount = async (username: string, password: string) => {
     // event.preventDefault();
     if (!username.length || !password.length) {
-      setMessage('Please fill out all fields');
+      setMessage('Please fill out all fields.');
       return;
     }
     try {
@@ -63,7 +63,7 @@ export const CreateAccount = () => {
         <div>
           <Input value={username} onChange={(event)=> {onInputChange(event, 'username')}} label="Username" />
           <Input value={password} onChange={(event)=> {onInputChange(event, 'password')}} label="Password" />
-          <Button onClick={() => { createAccount(username, password) }} >Create Account</Button>
+          <Button role={'create-account'} onClick={() => { createAccount(username, password) }} >Create Account</Button>
           {message.length > 0 && <Alert message={message} onClose={onAlertClose}/>}
         </div>
       </Card>
