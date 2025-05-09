@@ -32,7 +32,7 @@ export function CreateUser() {
   return (
     <FlowLayout>
       <Card title="What's your first and last name?">
-        <div className="space-y-2">
+        <div>
           <Input value={firstName} onChange={(event)=> {onInputChange(event, 'firstName')}} label="First name" />
           <Input value={lastName} onChange={(event)=> {onInputChange(event, 'lastName')}} label="Last name" />
           <Input value={email} onChange={(event)=> {onInputChange(event, 'email')}} label="Email" />

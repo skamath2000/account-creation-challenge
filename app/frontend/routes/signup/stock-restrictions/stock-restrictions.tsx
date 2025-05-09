@@ -14,9 +14,9 @@ export function StockRestrictions() {
         description="If you are a broker dealer or registered representative of another company, you may be restricted from trading that stock."
       >
         {/*<li>style UI to look like given mock, make sure the typeahead is realtime feeling search</li>*/}
-        <div className="space-y-2">
+        <div>
           <Input value={stockSymbol} onChange={(event) => { setStockSymbol(event.target.value) }}label="Stock Symbol" />
-          <Button href="/signup/create-account">Continue</Button>
+          <Button href="/signup/deposit">Continue</Button>
         </div>
       </Card>
     </FlowLayout>
