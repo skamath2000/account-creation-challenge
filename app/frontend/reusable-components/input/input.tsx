@@ -10,11 +10,11 @@ export function Input({ onChange, label, value }: Props) {
   const id = label.replace(/ /gm, '_');
 
   return (
-    <div>
-      <label className="block text-sm">{label}</label>
+    <div className="mb-6 last-of-type:mb-12">
+      <label className="mb-2 block text-sm">{label}</label>
       <input
         id={id}
-        className="block w-full p-2 border-4 border-solid border-slate-300"
+        className="block w-full rounded-md p-2 border-2 border-b-indigo-500"
         value={value}
         onChange={onChange}
       />
